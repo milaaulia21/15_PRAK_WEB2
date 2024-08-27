@@ -16,5 +16,7 @@ Pada potongan coding tersebut digunakan untuk mendefinisikan kelas 'Dosen'. Kela
 Atribut-atribut ini didefinisikan sebagai 'public yang berarti dapat diakses langsung dari luar kelas.
 
 'public $nama' : Atribut untuk menyimpan nama dosen.
+
 'public $nip' : Atribut untuk menyimpan Nomor Induk Pegawai (NIP) dosen.
+
 'public $mataKuliah' : Atribut untuk menyimpan mata kuliah yang diajarkan oleh dosen.
