@@ -1,9 +1,6 @@
 # Praktikum Web 2
 
 
-## JOBSHEET 1 
-### 1. Membuat Class dan Object 
-
 ## TUGAS 1
 ### 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah
 
