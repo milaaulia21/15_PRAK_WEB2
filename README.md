@@ -44,10 +44,10 @@ pembuatan kelas, penggunaan metode, dan hasil output.
 
 #### Penjelasan 
 
-   class Dosen {
-          public $nama;
-          public $nip;
-          public $mataKuliah;
+       class Dosen {
+              public $nama;
+              public $nip;
+              public $mataKuliah;
 ##### Class 
 Kelas Dosen dirancang untuk menyimpan dan mengelola informasi terkait seorang dosen. Kelas ini memiliki atribut untuk menyimpan nama, NIP (Nomor Induk Pegawai), dan mata kuliah yang diajarkan oleh dosen.
 ##### Atribute atau Properties
