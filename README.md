@@ -1,8 +1,6 @@
-# PRAKTIKUM PEMROGRAMAN WEB II
-# PRINSIP DASAR PHP OOP
+# PRAKTIKUM PEMROGRAMAN WEB II - PRINSIP DASAR PHP OOP
 
-
-# MODUL PERTEMUAN 1 DAN 2
+## MODUL PERTEMUAN 1 DAN 2
 
 ### 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah
 
