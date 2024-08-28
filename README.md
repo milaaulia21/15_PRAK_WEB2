@@ -1,7 +1,9 @@
-# Praktikum Web 2
+# PRAKTIKUM PEMROGRAMAN WEB II
+# PRINSIP DASAR PHP OOP
 
 
-## TUGAS 1
+# MODUL PERTEMUAN 1 DAN 2
+
 ### 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah
 
 ### Struktur Kode
