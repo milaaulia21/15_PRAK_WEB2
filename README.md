@@ -152,9 +152,9 @@ metode abstrak tersebut.
 - Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang 
 diinstansiasi.
 
-
+#### Hasil 
 #### 1. Membuat class dan Object
-#### Code
+##### Code
 
     <?php
     // Definisi Kelas Mahasiswa 
@@ -185,13 +185,13 @@ diinstansiasi.
     echo $mahasiswa->tampilkanData();
     ?>
 
-#### Penjelasan 
+##### Penjelasan 
 - *Kelas Mahasiswa*: Memiliki atribut nama, nim, dan jurusan yang bersifat public, sehingga bisa diakses dan diubah dari luar kelas.
 - *Constructor*: Menginisialisasi atribut dengan nilai yang diberikan saat objek dibuat.
 - *Metode tampilkanData()*: Menampilkan data mahasiswa dengan format yang ditentukan.
 - *Instansiasi Objek*: Membuat objek baru dari kelas Mahasiswa dengan data yang ditentukan, kemudian memanggil metode tampilkanData() untuk menampilkan data mahasiswa.
 
-#### Output
+##### Output
     Nama: Mila Aulia Putri
     NIM: 230102015
     Jurusan: Komputer dan Bisnis
@@ -254,12 +254,12 @@ diinstansiasi.
     echo "<br>";
     echo $mahasiswa->getJurusan();
     ?>
-#### Penjelasan
+##### Penjelasan
 - *Enkapsulasi*: Atribut nama, nim, dan jurusan dideklarasikan sebagai private, yang berarti hanya dapat diakses dan dimodifikasi melalui metode dalam kelas tersebut.
 - *Getter dan Setter*: Metode getNama(), getNim(), dan getJurusan() digunakan untuk mengakses nilai atribut, sedangkan setNama(), setNim(), dan setJurusan() digunakan untuk mengubah nilai atribut.
 - *Instansiasi dan Akses*: Objek Mahasiswa dibuat dengan data awal, dan data diakses atau diubah menggunakan metode getter dan setter.
 
-#### Output 
+##### Output 
     Sandi Rizki
     555
     Komputer dan Bisnis
@@ -308,12 +308,12 @@ diinstansiasi.
     echo $dosen->getMataKuliah();
     ?>
 
-#### Penjelasan 
+##### Penjelasan 
 - *Pewarisan*: Kelas Dosen mewarisi atribut dan metode dari kelas Pengguna. Kelas Dosen menambahkan atribut baru mataKuliah.
 - *Constructor*: Menggunakan parent::__construct($nama) untuk memanggil constructor dari kelas Pengguna dan menginisialisasi atribut nama, sementara mataKuliah diinisialisasi di constructor kelas Dosen.
 - *Instansiasi dan Akses*: Objek Dosen dibuat dengan data nama dan mata kuliah, kemudian metode getNama() dan getMataKuliah() digunakan untuk menampilkan data.
 
-#### Output 
+##### Output 
     Abdau
     Praktikum Web 2
 
@@ -359,11 +359,11 @@ diinstansiasi.
     echo $mahasiswa->aksesFitur();
     ?>
 
-#### Penjelasan 
+##### Penjelasan 
 - *Polimorfisme*: Metode aksesFitur() didefinisikan di kelas Pengguna dan diimplementasikan secara berbeda di kelas Dosen dan Mahasiswa. Ini memungkinkan metode yang sama memiliki perilaku yang berbeda tergantung pada jenis objek yang memanggilnya.
 - *Instansiasi dan Akses*: Objek Dosen dan Mahasiswa dibuat, dan masing-masing memanggil metode aksesFitur() yang memberikan hasil sesuai dengan implementasi di kelas masing-masing.
 
-#### Output
+##### Output
 Akses fitur pada dosen untuk mengelola nilai mahasiswa dan mata kuliah.
 Akses fitur khusus pada mahasiswa untuk melihat jadwal dan nilai.
 
@@ -404,12 +404,12 @@ Akses fitur khusus pada mahasiswa untuk melihat jadwal dan nilai.
     echo $dosen->aksesFitur();
     ?>
 
-#### Penjelasan
+##### Penjelasan
 - *Abstraksi*: Kelas Pengguna adalah kelas abstrak yang mendefinisikan metode abstrak aksesFitur(). Metode ini harus diimplementasikan oleh setiap subclass.
 - *Implementasi*: Kelas Mahasiswa dan Dosen mengimplementasikan metode aksesFitur() sesuai dengan kebutuhan spesifik mereka.
 - *Instansiasi dan Akses*: Objek Mahasiswa dan Dosen dibuat, dan metode aksesFitur() dipanggil untuk menunjukkan fitur yang disediakan oleh masing-masing kelas.
 
-#### Output
+##### Output
     Akses fitur sebagai mahasiswa. Anda dapat mengakses fitur akademik.
     Akses fitur sebagai dosen. Anda dapat mengakses fitur pengajaran.
 
