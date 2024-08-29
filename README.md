@@ -30,7 +30,7 @@ tampilkanData().
 
 
 
-#### TUGAS
+#### Tugas 
 SOAL :
 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah.
 2. Buat metode tampilkanDosen() untuk menampilkan informasi dosen.
@@ -39,7 +39,9 @@ menampilkan informasi tersebut.
 4. Buat dokumentasi proyek dan unggah ke repository GitHub, menjelaskan proses 
 pembuatan kelas, penggunaan metode, dan hasil output.
 
-#### Code 
+#### Hasil
+
+##### Code 
     <?php 
     // Mendefinisikan class dosen
     class Dosen {
