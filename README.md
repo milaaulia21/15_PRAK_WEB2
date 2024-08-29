@@ -83,7 +83,11 @@ Baris ini membuat objek baru dari kelas Dosen dengan nama "Abdau", NIP "10102", 
 
 Baris ini memanggil metode tampilkanDosen() pada objek $dosen. Metode ini mengembalikan string yang berisi informasi dosen, yang kemudian dicetak menggunakan echo.
 
-
+##### Output 
+    Nama: Abdau, NIP: 10102, Mata Kuliah: Praktikum Web 2
+- Nama: Menampilkan nama dosen, "Abdau".
+- NI*: Menampilkan Nomor Induk Pegawai dosen, "10102".
+- Mata Kuliah: Menampilkan mata kuliah yang diajarkan oleh dosen, "Praktikum Web 2".
 
 
 
