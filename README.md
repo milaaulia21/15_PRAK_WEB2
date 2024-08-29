@@ -1,7 +1,7 @@
 # PRAKTIKUM PEMROGRAMAN WEB II - PRINSIP DASAR PHP OOP
 
-## MODUL PERTEMUAN 1 DAN 2
 
+## MODUL PERTEMUAN 1 DAN 2
 
 ### JOBSHEET 1
 
@@ -28,9 +28,11 @@ perubahan jurusan.
 - Tampilkan data mahasiswa yang sudah diperbarui dengan memanggil metode 
 tampilkanData().
 
+
 #### Hasil 
 
 ##### 1. Membuat Class dan Object
+
 ##### Code
     <?php
     // Mendefinisikan class mahasiswa
@@ -67,8 +69,10 @@ tampilkanData().
 
 ##### Output 
     Nama: Mila Aulia, NIM: 230102015, Jurusan: Komputer dan Bisnis
+    
 
 ##### 2. Implementasi Constructor
+
 ##### Code
     <?php
     // Mendefinisikan class mahasiswa
@@ -103,7 +107,9 @@ tampilkanData().
 ##### Output 
 Nama: Mila Aulia, NIM: 230102015, Jurusan: Komputer dan Bisnis
 
+
 ##### 3.  Membuat Metode Tambahan
+
 ##### Code
     <?php
     // Mendefinisikan class mahasiswa
@@ -159,7 +165,9 @@ Nama: Mila Aulia, NIM: 230102015, Jurusan: Komputer dan Bisnis
     Setelah Update:
     Nama: Mila Aulia, NIM: 230102015, Jurusan: Teknik Informatika
 
+
 ##### 4. Penggunaan Atribut dan Metode
+
 ##### Code
     <?php
     // Mendefinisikan class mahasiswa
@@ -232,6 +240,7 @@ SOAL :
 menampilkan informasi tersebut.
 4. Buat dokumentasi proyek dan unggah ke repository GitHub, menjelaskan proses 
 pembuatan kelas, penggunaan metode, dan hasil output.
+
 
 #### Hasil
 
@@ -310,6 +319,8 @@ Baris ini memanggil metode tampilkanDosen() pada objek $dosen. Metode ini mengem
 - NIM: Menampilkan Nomor Induk Pegawai dosen, "10102".
 - Mata Kuliah: Menampilkan mata kuliah yang diajarkan oleh dosen, "Praktikum Web 2".
 
+
+
 ## MODUL PERTEMUAN 3 DAN 4
 
 ### JOBSHEET 2
@@ -346,8 +357,11 @@ metode abstrak tersebut.
 - Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang 
 diinstansiasi.
 
+
 #### Hasil 
+
 #### 1. Membuat class dan Object
+
 ##### Code
 
     <?php
@@ -390,7 +404,9 @@ diinstansiasi.
     NIM: 230102015
     Jurusan: Komputer dan Bisnis
 
+
 #### 2. Encapsulation
+
 ##### Code
     <?php
     // Mendefinisikan class mahasiswa dengan enkapsulasi
@@ -458,7 +474,9 @@ diinstansiasi.
     555
     Komputer dan Bisnis
 
-#### Inheritance 
+
+#### 3. Inheritance 
+
 ##### Code
     <?php
     // Mendefinisikan class Pengguna
@@ -511,7 +529,9 @@ diinstansiasi.
     Abdau
     Praktikum Web 2
 
+
 #### 4. Polymorphism
+
 ##### Code
     <?php
     class Pengguna {
@@ -561,7 +581,9 @@ diinstansiasi.
 Akses fitur pada dosen untuk mengelola nilai mahasiswa dan mata kuliah.
 Akses fitur khusus pada mahasiswa untuk melihat jadwal dan nilai.
 
+
 #### 5. Abstraction
+
 ##### Code
     <?php
     // Mendefinisikan class abstrak pengguna
@@ -608,6 +630,8 @@ Akses fitur khusus pada mahasiswa untuk melihat jadwal dan nilai.
     Akses fitur sebagai dosen. Anda dapat mengakses fitur pengajaran.
 
 
+
+
 ## MODUL PERTEMUAN 5 DAN 6
 
 ### JOBSHEET 3
@@ -635,6 +659,7 @@ atribut name dan studentID.
 - Buat kelas abstrak Course dengan metode abstrak getCourseDetails().
 - Buat kelas OnlineCourse dan OfflineCourse yang mengimplementasikan 
 getCourseDetails() untuk memberikan detail yang berbeda.
+
 
 #### Hasil 
 
@@ -704,6 +729,7 @@ getCourseDetails() untuk memberikan detail yang berbeda.
 ##### Output 
     Student Name: Mila Aulia
     Student ID: 0978
+
 
 ##### 2. Polymorphism
 
@@ -794,6 +820,7 @@ getCourseDetails() untuk memberikan detail yang berbeda.
 ##### Output
     Student Name: Mila Aulia
     Teacher Name: Abdau
+
 
 ##### 3. Encapsulation
 
@@ -888,6 +915,7 @@ getCourseDetails() untuk memberikan detail yang berbeda.
     Nathan Noel
     200122
 
+
 ##### 4. Abstraction
 
 ##### Code
@@ -963,6 +991,7 @@ kelas Mahasiswa.
 membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing 
 memiliki cara tersendiri untuk mengelola pengajuan jurnal.
 
+
 #### Hasil 
 
 #### Penjelasan
@@ -993,16 +1022,6 @@ Kelas Person adalah kelas dasar yang menyimpan informasi umum tentang seseorang,
 
 ##### Output
 Jika metode getRole() dipanggil dari objek Person, hasilnya adalah "Ini adalah person." Namun, dalam proyek ini, metode ini akan di-override di kelas turunan Dosen dan Mahasiswa.
-
-
-
-1. *Output dari Person*: Metode getRole() yang digunakan di kelas dasar Person menunjukkan peran generik. Kelas turunan (Dosen dan Mahasiswa) meng-override metode ini untuk memberikan deskripsi peran yang lebih spesifik.
-
-2. *Output dari Dosen*: Menggunakan getRole(), getName(), dan getNidn(), objek Dosen memberikan informasi yang relevan mengenai nama dan NIDN dosen serta mengkonfirmasi pengajuan jurnal.
-
-3. *Output dari Mahasiswa*: Menggunakan getRole(), getName(), dan getNim(), objek Mahasiswa memberikan informasi mengenai nama dan NIM mahasiswa serta mengkonfirmasi pengajuan jurnal.
-
-4. *Output dari JurnalDosen dan JurnalMahasiswa*: Kedua kelas ini memberikan pesan yang sesuai dengan peran pengaju jurnal, menunjukkan implementasi spesifik dari metode pengajuanJurnal().
 
 
 #### Kelas 'Dosen'
@@ -1052,6 +1071,7 @@ Kelas Dosen mewarisi dari kelas Person dan menambahkan atribut serta metode khus
     Nama : Rosita
     NIDN : 12345
 
+
 #### Class 'Mahasiswa'
 Kelas Mahasiswa mewarisi dari kelas Person dan menambahkan atribut serta metode yang terkait dengan mahasiswa, seperti NIM. Seperti Dosen, kelas ini juga meng-override metode getRole() untuk menampilkan peran sebagai mahasiswa.
 
@@ -1099,6 +1119,7 @@ Kelas Mahasiswa mewarisi dari kelas Person dan menambahkan atribut serta metode 
     Nama : Nathan
     NIM : 230102015
 
+
 #### Class Abstract 'Jurnal'
 Kelas abstrak Jurnal mendefinisikan struktur dasar untuk pengelolaan jurnal, termasuk atribut judul dan metode abstrak pengajuanJurnal(). Kelas ini menetapkan kontrak yang harus diikuti oleh kelas-kelas turunannya.
 
@@ -1119,6 +1140,7 @@ Kelas abstrak Jurnal mendefinisikan struktur dasar untuk pengelolaan jurnal, ter
 - *Metode*:
   - __construct($judul): Menginisialisasi judul untuk objek jurnal.
   - pengajuanJurnal(): Metode abstrak yang harus diimplementasikan oleh kelas-kelas turunan. Tidak ada implementasi di kelas ini, sehingga kelas turunan harus memberikan implementasi spesifik.
+
 
 #### Class 'JurnalDosen' dan 'JurnalMahasiswa'
 Kelas-kelas ini adalah implementasi dari kelas abstrak Jurnal, masing-masing dengan cara tersendiri untuk mengelola pengajuan jurnal berdasarkan peran pengaju (Dosen atau Mahasiswa).
@@ -1169,11 +1191,3 @@ Kelas-kelas ini adalah implementasi dari kelas abstrak Jurnal, masing-masing den
 3. *Output dari Mahasiswa*: Menggunakan getRole(), getName(), dan getNim(), objek Mahasiswa memberikan informasi mengenai nama dan NIM mahasiswa serta mengkonfirmasi pengajuan jurnal.
 
 4. *Output dari JurnalDosen dan JurnalMahasiswa*: Kedua kelas ini memberikan pesan yang sesuai dengan peran pengaju jurnal, menunjukkan implementasi spesifik dari metode pengajuanJurnal().
-
-
-
-
-
-
-
-
