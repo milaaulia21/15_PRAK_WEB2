@@ -28,8 +28,202 @@ perubahan jurusan.
 - Tampilkan data mahasiswa yang sudah diperbarui dengan memanggil metode 
 tampilkanData().
 
+#### Hasil 
 
+##### 1. Membuat Class dan Object
+##### Code
+    <?php
+    // Mendefinisikan class mahasiswa
+    class Mahasiswa {
+        // Atribute atau Properties bersifat public yang dapat diakses diluar class
+        public $nama;
+        public $nim;
+        public $jurusan;
+    
+        // Constructor untuk mengatur nilai awal dari atribut saat objek dibuat
+        public function __construct($nama, $nim, $jurusan) {
+            $this->nama=$nama;
+            $this->nim=$nim;
+            $this->jurusan=$jurusan;
+        }
+    
+        // Metode untuk menampilkan data mahasiswa
+        public function tampilkanData() {
+            return "Nama: $this->nama, NIM: $this->nim, Jurusan: $this->jurusan";
+        }
+    }
+    
+    // Instansiasi Objek dari class mahasiswa
+    $mahasiswa=new Mahasiswa("Mila Aulia", "230102015", "Komputer dan Bisnis");
+    // Menampilkan data mahasiswa
+    echo $mahasiswa->tampilkanData();
+    ?>
 
+##### Penjelasan
+- **Kelas Mahasiswa**: Kelas ini mendefinisikan tiga atribut publik (`nama`, `nim`, dan `jurusan`) yang dapat diakses dari luar kelas.
+- **Constructor**: Metode `__construct()` digunakan untuk menginisialisasi nilai atribut ketika objek `Mahasiswa` baru dibuat. Ini memungkinkan pemberian nilai awal pada atribut `nama`, `nim`, dan `jurusan`.
+- **Metode `tampilkanData()`**: Metode ini mengembalikan string yang berisi data mahasiswa dalam format yang telah ditentukan.
+- **Instansiasi Objek**: Objek `Mahasiswa` dibuat dengan nama "Mila Aulia", NIM "230102015", dan jurusan "Komputer dan Bisnis". Metode `tampilkanData()` dipanggil untuk menampilkan data mahasiswa.
+
+##### Output 
+    Nama: Mila Aulia, NIM: 230102015, Jurusan: Komputer dan Bisnis
+
+##### 2. Implementasi Constructor
+##### Code
+    <?php
+    // Mendefinisikan class mahasiswa
+    class Mahasiswa {
+        // Atribute atau Properties bersifat public yang dapat diakses diluar class
+        public $nama;
+        public $nim;
+        public $jurusan;
+    
+        // Constructor untuk mengatur nilai awal dari atribut saat objek dibuat
+        public function __construct($nama, $nim, $jurusan) {
+            $this->nama=$nama;
+            $this->nim=$nim;
+            $this->jurusan=$jurusan;
+        }
+    
+        // Metode untuk menampilkan data mahasiswa
+        public function tampilkanData() {
+            return "Nama: $this->nama, NIM: $this->nim, Jurusan: $this->jurusan";
+        }
+    }
+    
+    // Instansiasi Objek dari class mahasiswa
+    $mahasiswa=new Mahasiswa("Mila Aulia", "230102015", "Komputer dan Bisnis");
+    // Menampilkan data mahasiswa
+    echo $mahasiswa->tampilkanData();
+    ?>
+
+##### Penjelasan 
+- **Constructor**: Pada bagian ini, constructor `__construct()` sudah diterapkan pada kode sebelumnya, yang menginisialisasi atribut `nama`, `nim`, dan `jurusan` saat objek `Mahasiswa` dibuat. Dengan menggunakan constructor ini, Anda bisa mengatur nilai awal dari atribut objek saat objek dibuat.
+
+##### Output 
+Nama: Mila Aulia, NIM: 230102015, Jurusan: Komputer dan Bisnis
+
+##### 3.  Membuat Metode Tambahan
+##### Code
+    <?php
+    // Mendefinisikan class mahasiswa
+    class Mahasiswa {
+        // Atribute atau Properties bersifat public yang dapat diakses diluar class
+        public $nama;
+        public $nim;
+        public $jurusan;
+    
+        // Constructor untuk mengatur nilai awal dari atribut saat objek dibuat
+        public function __construct($nama, $nim, $jurusan) {
+            $this->nama=$nama;
+            $this->nim=$nim;
+            $this->jurusan=$jurusan;
+        }
+    
+        // Metode untuk menampilkan data mahasiswa
+        public function tampilkanData() {
+            return "Nama: $this->nama, NIM: $this->nim, Jurusan: $this->jurusan";
+        }
+    
+        // Metode untuk mengubah jurusan mahasiswa
+        public function updateJurusan($jurusan) {
+            $this->jurusan = $jurusan;
+        }
+    }
+    
+    // Instansiasi Objek dari class mahasiswa
+    $mahasiswa=new Mahasiswa("Mila Aulia", "230102015", "Komputer dan Bisnis");
+    echo "Sebelum Update:";
+    echo "<br>";
+    
+    // Menampilkan data mahasiswa
+    echo $mahasiswa->tampilkanData();
+    echo "<br>";
+    
+    // Mengubah jurusan mahasiswa
+    $mahasiswa->updateJurusan("Teknik Informatika");
+    echo "Setelah Update:";
+    echo "<br>";
+    
+    // Menampilkan data mahasiswa yang sudah diperbarui
+    echo $mahasiswa->tampilkanData();
+    ?>
+
+##### Penjelasan 
+- **Metode `updateJurusan()`**: Metode ini ditambahkan untuk memungkinkan perubahan nilai atribut `jurusan`. Metode ini menerima parameter baru untuk `jurusan` dan mengubah nilai atribut `jurusan` pada objek.
+- **Instansiasi dan Penggunaan**: Objek `Mahasiswa` dibuat dengan data awal, data mahasiswa ditampilkan sebelum dan setelah jurusan diubah menggunakan metode `updateJurusan()`, kemudian data mahasiswa yang diperbarui ditampilkan kembali.
+
+##### Output
+    Sebelum Update:
+    Nama: Mila Aulia, NIM: 230102015, Jurusan: Komputer dan Bisnis
+    Setelah Update:
+    Nama: Mila Aulia, NIM: 230102015, Jurusan: Teknik Informatika
+
+##### 4. Penggunaan Atribut dan Metode
+##### Code
+    <?php
+    // Mendefinisikan class mahasiswa
+    class Mahasiswa {
+        // Atribute atau Properties bersifat public yang dapat diakses diluar class
+        public $nama;
+        public $nim;
+        public $jurusan;
+    
+        // Constructor untuk mengatur nilai awal dari atribut saat objek dibuat
+        public function __construct($nama, $nim, $jurusan) {
+            $this->nama=$nama;
+            $this->nim=$nim;
+            $this->jurusan=$jurusan;
+        }
+    
+        // Metode untuk menampilkan data mahasiswa
+        public function tampilkanData() {
+            return "Nama: $this->nama, NIM: $this->nim, Jurusan: $this->jurusan";
+        }
+    
+        // Metode untuk mengubah jurusan mahasiswa
+        public function updateJurusan($jurusan) {
+            $this->jurusan = $jurusan;
+        }
+    
+        // Metode untuk mengubah nim mahasiswa
+        public function setNim($nim) {
+            $this->nim = $nim;
+        }
+    }
+    
+    // Instansiasi Objek dari class mahasiswa
+    $mahasiswa=new Mahasiswa("Mila Aulia", "230102015", "Komputer dan Bisnis");
+    echo "Sebelum Update:";
+    echo "<br>";
+    
+    // Menampilkan data mahasiswa
+    echo $mahasiswa->tampilkanData();
+    echo "<br>";
+    
+    // Mengubah jurusan mahasiswa
+    $mahasiswa->updateJurusan("Teknik Informatika");
+    
+    // Mengubah nim mahasiswa
+    $mahasiswa->setNim("12345");
+    echo "Setelah Update:";
+    echo "<br>";
+    
+    // Menampilkan data mahasiswa yang sudah diperbarui
+    echo $mahasiswa->tampilkanData();
+    ?>
+
+##### Penjelasan 
+- **Metode `setNim()`**: Metode ini ditambahkan untuk memungkinkan perubahan nilai atribut `nim`. Metode ini menerima parameter baru untuk `nim` dan mengubah nilai atribut `nim` pada objek.
+- **Instansiasi dan Penggunaan**: Objek `Mahasiswa` dibuat dengan data awal. Data mahasiswa ditampilkan sebelum dan setelah atribut `jurusan` dan `nim` diubah menggunakan metode `updateJurusan()` dan `setNim()`. Data mahasiswa yang diperbarui ditampilkan kembali.
+
+##### Output
+    Sebelum Update:
+    Nama: Mila Aulia, NIM: 230102015, Jurusan: Komputer dan Bisnis
+    Setelah Update:
+    Nama: Mila Aulia, NIM: 12345, Jurusan: Teknik Informatika
+
+    
 #### Tugas 
 SOAL :
 1. Implementasikan kelas Dosen dengan atribut nama, nip, dan mataKuliah.
