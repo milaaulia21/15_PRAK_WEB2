@@ -636,7 +636,319 @@ atribut name dan studentID.
 - Buat kelas OnlineCourse dan OfflineCourse yang mengimplementasikan 
 getCourseDetails() untuk memberikan detail yang berbeda.
 
+#### Hasil 
 
+##### 1. Inheritance
+
+##### Code
+    <?php
+    // Mendefinisikan kelas Person
+    class Person {
+        // Atribut atau properti
+        protected $name;
+    
+        // Constructor untuk menginisialisasi nama
+        public function __construct($name) {
+            $this->name = $name;
+        }
+    
+        // Metode untuk mendapatkan nama 
+        public function getName() {
+            return $this->name;
+        }
+    }
+    
+    // Kelas Student yang mewarisi dari Person
+    class Student extends Person {
+        // Atribut private khusus untuk kelas Student
+        private $studentID;
+    
+        // Constructor untuk menginisialisasi nama dan studentID
+        public function __construct($name, $studentID) {
+            parent::__construct($name);
+            $this->studentID = $studentID; // Inisialisasi studentID
+        }
+    
+        // Metode untuk mendapatkan studentID
+        public function getStudentID() {
+            return $this->studentID;
+        }
+    }
+    
+    // Instansiasi objek student
+    $student = new Student("Mila Aulia", "0978");
+    // Menampilkan data Student
+    echo "Student Name: ";
+    echo $student->getName();
+    echo "<br>";
+    echo "Student ID: ";
+    echo $student->getStudentID();
+    ?>
+
+##### Penjelasan 
+- **Kelas Person**: 
+  - **Atribut**: `name` adalah atribut yang dilindungi (`protected`), sehingga hanya dapat diakses di dalam kelas itu sendiri dan kelas yang mewarisinya.
+  - **Constructor**: Metode `__construct()` digunakan untuk menginisialisasi atribut `name` saat objek `Person` dibuat.
+  - **Metode `getName()`**: Mengembalikan nilai atribut `name`.
+
+- **Kelas Student**:
+  - **Pewarisan**: Kelas `Student` mewarisi dari `Person`, yang berarti `Student` memiliki akses ke atribut dan metode dari `Person`.
+  - **Atribut**: `studentID` adalah atribut private, yang hanya dapat diakses di dalam kelas `Student`.
+  - **Constructor**: `__construct()` memanggil constructor dari `Person` dengan `parent::__construct($name)` dan menginisialisasi `studentID`.
+  - **Metode `getStudentID()`**: Mengembalikan nilai atribut `studentID`.
+
+- **Instansiasi dan Penggunaan**:
+  - Membuat objek `Student` dengan nama "Mila Aulia" dan ID "0978".
+  - Menampilkan nama dan ID mahasiswa menggunakan metode `getName()` dan `getStudentID()`.
+
+##### Output 
+    Student Name: Mila Aulia
+    Student ID: 0978
+
+##### 2. Polymorphism
+
+##### Code
+    <?php
+    // Mendefinisikan kelas Person
+    class Person {
+        // Atribut atau properti
+        protected $name;
+    
+        // Constructor untuk menginisialisasi nama
+        public function __construct($name) {
+            $this->name = $name;
+        }
+    
+        // Metode untuk mendapatkan nama 
+        public function getName() {
+            return $this->name;
+        }
+    }
+    
+    // Kelas Student yang mewarisi dari Person
+    class Student extends Person {
+        // Atribut private khusus untuk kelas Student
+        private $studentID;
+    
+        // Constructor untuk menginisialisasi nama dan studentID
+        public function __construct($name, $studentID) {
+            parent::__construct($name);
+            $this->studentID = $studentID; // Inisialisasi studentID
+        }
+    
+        // Metode untuk mendapatkan studentID
+        public function getStudentID() {
+            return $this->studentID;
+        }
+    
+        // Override metode getName untuk format berbeda
+        public function getName() {
+            return "Student Name: $this->name";
+        }
+    }
+    
+    // Kelas Teacher yang mewarisi dari Person
+    class Teacher extends Person {
+        // Atribut private khusus untuk kelas Teacher
+        private $teacherID;
+    
+        // Constructor untuk menginisialisasi nama dan teacherID
+        public function __construct($name, $teacherID) {
+            parent::__construct($name);
+            $this->teacherID = $teacherID; // Inisialisasi teacherID
+        }
+    
+        // Override metode getName untuk format berbeda
+        public function getName() {
+            return "Teacher Name: $this->name";
+        }
+    }
+    
+    // Instansiasi objek student dan teacher
+    $student = new Student("Mila Aulia", "230102015");
+    $teacher = new Teacher("Abdau", "1234");
+    
+    // Menampilkan nama student dan teacher
+    echo $student->getName();
+    echo "<br>";
+    echo $teacher->getName();
+    ?>
+
+##### Penjelasan 
+- **Kelas Person**:
+  - Sama seperti sebelumnya, berisi atribut `name` dan metode `getName()`.
+
+- **Kelas Student**:
+  - **Override**: Metode `getName()` di kelas `Student` diubah untuk menampilkan nama dengan format khusus ("Student Name: ...").
+
+- **Kelas Teacher**:
+  - **Pewarisan**: Mewarisi dari `Person`.
+  - **Atribut**: `teacherID` adalah atribut private.
+  - **Constructor**: Menginisialisasi nama dan `teacherID`.
+  - **Override**: Metode `getName()` diubah untuk menampilkan nama dengan format khusus ("Teacher Name: ...").
+
+- **Instansiasi dan Penggunaan**:
+  - Membuat objek `Student` dan `Teacher`.
+  - Menampilkan nama masing-masing objek menggunakan metode `getName()` yang telah dioverride untuk format yang berbeda.
+
+##### Output
+    Student Name: Mila Aulia
+    Teacher Name: Abdau
+
+##### 3. Encapsulation
+
+##### Code
+    <?php
+    // Mendefinisikan kelas Person
+    class Person {
+        // Atribut atau properti
+        protected $name;
+    
+        // Constructor untuk menginisialisasi nama
+        public function __construct($name) {
+            $this->name = $name;
+        }
+    
+        // Metode untuk mendapatkan nama 
+        public function getName() {
+            return $this->name;
+        }
+    }
+    
+    // Kelas Student dengan atribut name dan studentID sebagai private
+    class Student extends Person {
+        // Atribut atau properti
+        private $studentID;
+    
+        // Constructor untuk menginisialisasi nama dan studentID
+        public function __construct($name, $studentID) {
+            parent::__construct($name);
+            $this->studentID = $studentID; // Inisialisasi studentID
+        }
+    
+        // Getter untuk mendapatkan nama student
+        public function getName() {
+            return $this->name;
+        }
+    
+        // Getter untuk mendapatkan studentID
+        public function getStudentID() {
+            return $this->studentID;
+        }
+    
+        // Setter untuk mengubah nama student
+        public function setName($name) {
+            $this->name = $name;
+        }
+    
+        // Setter untuk mengubah studentID
+        public function setStudentID($studentID) {
+            $this->studentID = $studentID;
+        }
+    }
+    
+    // Instansiasi objek student
+    $student = new Student("Mila Aulia", "230102015");
+    
+    // Menampilkan data student sebelum diperbarui
+    echo $student->getName();
+    echo "<br>";
+    echo $student->getStudentID();
+    echo "<hr>";
+    
+    // Menampilkan data student setelah diperbarui
+    echo "Setelah diubah: ";
+    echo "<br>";
+    $student->setName("Nathan Noel");
+    echo $student->getName();
+    echo "<br>";
+    $student->setStudentID("200122");
+    echo $student->getStudentID();
+    ?>
+
+##### Penjelasan 
+- **Kelas Person**: Sama seperti sebelumnya.
+
+- **Kelas Student**:
+  - **Encapsulation**: Atribut `name` dan `studentID` diubah menjadi private. Ini mengontrol akses ke atribut tersebut.
+  - **Getter dan Setter**:
+    - **`getName()`**: Mengembalikan nilai `name`.
+    - **`setName()`**: Mengubah nilai `name`.
+    - **`getStudentID()`**: Mengembalikan nilai `studentID`.
+    - **`setStudentID()`**: Mengubah nilai `studentID`.
+
+- **Instansiasi dan Penggunaan**:
+  - Membuat objek `Student`.
+  - Menampilkan nilai sebelum dan sesudah pembaruan atribut menggunakan metode getter dan setter.
+
+##### Output 
+    Mila Aulia
+    230102015
+    Setelah diubah:
+    Nathan Noel
+    200122
+
+##### 4. Abstraction
+
+##### Code
+    <?php
+    // Kelas abstrak Course
+    abstract class Course {
+        // Metode abstrak yang harus diimplementasikan oleh kelas turunan
+        abstract public function getCourseDetails();
+    }
+    
+    // Kelas OnlineCourse yang mengimplementasikan getCourseDetails
+    class OnlineCourse extends Course {
+        // Implementasi metode getCourseDetails untuk kursus online
+        public function getCourseDetails() {
+            return "Ini adalah online course.";
+        }
+    }
+    
+    // Kelas OfflineCourse yang mengimplementasikan getCourseDetails
+    class OfflineCourse extends Course {
+        // Implementasi metode getCourseDetails untuk kursus offline
+        public function getCourseDetails() {
+            return "Ini adalah offline course.";
+        }
+    }
+    
+    // Instansiasi objek onlinecourse dan offlinecourse
+    $onlinecourse = new OnlineCourse();
+    $offlinecourse = new OfflineCourse();
+    
+    // Output dari onlinecourse dan offlinecourse
+    echo $onlinecourse->getCourseDetails();
+    echo "<br>";
+    echo $offlinecourse->getCourseDetails();
+    ?>
+
+##### Penjelasan 
+- **Kelas Abstrak `Course`**:
+  - **Deklarasi**: Kelas `Course` dideklarasikan sebagai kelas abstrak menggunakan kata kunci `abstract`. Kelas ini tidak dapat diinstansiasi secara langsung.
+  - **Metode Abstrak**: Kelas `Course` mendeklarasikan metode `getCourseDetails()` sebagai metode abstrak. Ini berarti bahwa setiap kelas yang mewarisi `Course` harus mengimplementasikan metode ini.
+  - **Tujuan**: Kelas abstrak `Course` memberikan *blueprint* atau template untuk kursus tanpa menentukan bagaimana metode `getCourseDetails()` diimplementasikan.
+
+- **Kelas `OnlineCourse`**:
+  - **Pewarisan**: Kelas `OnlineCourse` mewarisi dari kelas `Course`, sehingga harus mengimplementasikan metode `getCourseDetails()`.
+  - **Implementasi**: Metode `getCourseDetails()` di `OnlineCourse` mengembalikan string "Ini adalah online course." Ini adalah detail spesifik tentang jenis kursus ini.
+
+- **Kelas `OfflineCourse`**:
+  - **Pewarisan**: Kelas `OfflineCourse` juga mewarisi dari kelas `Course`, sehingga harus mengimplementasikan metode `getCourseDetails()`.
+  - **Implementasi**: Metode `getCourseDetails()` di `OfflineCourse` mengembalikan string "Ini adalah offline course." Ini adalah detail spesifik tentang jenis kursus ini.
+
+- **Instansiasi dan Penggunaan**:
+  - Membuat objek `OnlineCourse` dan `OfflineCourse`.
+  - Memanggil metode `getCourseDetails()` untuk masing-masing objek.
+  - Menampilkan hasil dari metode `getCourseDetails()`, yang memberikan informasi sesuai dengan jenis kursus.
+
+##### Output 
+    Ini adalah online course.
+    <br>
+    Ini adalah offline course.
+
+    
 #### Tugas
 Buat proyek PHP dengan studi kasus sebagai berikut: 
 1. Implementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa.
@@ -651,7 +963,10 @@ kelas Mahasiswa.
 membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing 
 memiliki cara tersendiri untuk mengelola pengajuan jurnal.
 
+#### Hasil 
+
 #### Penjelasan
+
 #### Kelas 'Person'
 *Deskripsi*:
 Kelas Person adalah kelas dasar yang menyimpan informasi umum tentang seseorang, dalam hal ini nama. Kelas ini berfungsi sebagai induk bagi kelas Dosen dan Mahasiswa, menyediakan atribut dasar serta metode yang dapat digunakan dan diubah oleh kelas turunannya.
